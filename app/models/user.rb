@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :offers
+  has_many :tasks
 
   def to_s
     pseudonym
