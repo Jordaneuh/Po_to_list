@@ -4,13 +4,19 @@
 
 <h1>Users</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+<div id="users" class="container">
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="col-md-4 mb-4"> <!-- 3 par ligne -->
+        <div class="card d-flex flex-column h-100 p-3"> 
+          <%= render user %>
+          <div class="mt-auto"> <!-- Pousse le bouton en bas -->
+            <%= link_to "Show this user", user, class: "btn btn-primary btn-sm w-100" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <button type="button" class="btn btn-success"><%= link_to "New user", new_user_path, class: "text-white text-decoration-none"%>
