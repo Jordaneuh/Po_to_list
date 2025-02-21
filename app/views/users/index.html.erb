@@ -13,8 +13,10 @@
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<button type="button" class="btn btn-success"><%= link_to "New user", new_user_path, class: "text-white text-decoration-none"%>
+</button>
 <br>
-<div class="col-md-2 p-4 bg-primary-subtle border border-primary-subtle border border-primary-subtle rounded-5">
-        <%= link_to "Voir mes tâches", tasks_path %>
-</div>
+
+<button type="button" class="btn btn-info"><%= link_to "Voir mes tâches", tasks_path, class: "text-white text-decoration-none"%>
+</button>
+
