@@ -2,10 +2,11 @@
 
 <%= render @user %>
 
+<ul>
 <% @user.tasks.each do |task| %>
-	<%= task %>
+	<li><%= link_to task %></li>
 <% end %>
-
+</ul>
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
