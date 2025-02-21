@@ -7,13 +7,13 @@
 <div id="users" class="container">
   <div class="row">
     <% @users.each do |user| %>
-      <div class="col-md-4 mb-4"> <!-- 3 par ligne -->
-        <div class="card d-flex flex-column h-100 p-3"> 
-          <%= render user %>
-          <div class="mt-auto"> <!-- Pousse le bouton en bas -->
-            <%= link_to "Show this user", user, class: "btn btn-primary btn-sm w-100" %>
-          </div>
-        </div>
+      <div class="col-md-4 mb-4"> 
+        <div class="card d-flex flex-column h-100 text-center p-3"> 
+        <%= render user %>
+        <div class="mt-auto">
+          <%= link_to "Show this user", user, class: "btn btn-primary btn-sm w-100" %>
+      </div>
+</div>
       </div>
     <% end %>
   </div>
