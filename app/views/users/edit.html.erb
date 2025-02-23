@@ -2,11 +2,20 @@
 
 <h1>Editing user</h1>
 
-<%= render "form", user: @user %>
-
+  <div class="row justify-content-center align-items-center">
+  <div class="col-md-4 mb-4"> 
+    <div class="card d-flex flex-column h-100 text-center p-3"> 
+      <div class="w-75 mx-auto">
+        <%= render "form", user: @user %>
+      </div>
+    </div>
+  </div>
+</div>
 <br>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+<div class="text-center">
+    <button type="button" class="btn btn-success"><%= link_to "Show this user", @user, class: "text-white text-decoration-none"%>
+  </button>
+    <button type="button" class="btn btn-danger"><%= link_to "Back to users", users_path, class: "text-white text-decoration-none"%>
+  </button>
 </div>

@@ -2,11 +2,21 @@
 
 <h1>Editing task</h1>
 
-<%= render "form", task: @task %>
+<div class="row justify-content-center align-items-center">
+  <div class="col-md-4 mb-4"> 
+    <div class="card d-flex flex-column h-100 text-center p-3"> 
+      <div class="w-75 mx-auto">
+        <%= render "form", task: @task %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <br>
 
-<div>
-  <%= link_to "Show this task", @task %> |
-  <%= link_to "Back to tasks", tasks_path %>
+<div class="text-center">
+  <button type="button" class="btn btn-success"><%= link_to "Show this task", @task, class: "text-white text-decoration-none"%>
+  </button>
+  <button type="button" class="btn btn-danger"><%= link_to "Back to tasks", tasks_path, class: "text-white text-decoration-none"%>
+  </button>
 </div>
